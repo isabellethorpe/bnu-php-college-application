@@ -31,6 +31,7 @@
     <th>County</th>
     <th>Country</th>
     <th>Postcode</th>
+    <th>Edit</th>
     </tr>";
       
       // Display the student details within the html table
@@ -45,6 +46,7 @@
          $data['content'] .= "<td> {$row["county"]} </td>";
          $data['content'] .= "<td> {$row["country"]} </td>";
          $data['content'] .= "<td> {$row["postcode"]} </td>";
+         $data['content'] .= "<td> <input type='checkbox' name='' value=''</td>";
       }
       $data['content'] .= "</table>";
 
