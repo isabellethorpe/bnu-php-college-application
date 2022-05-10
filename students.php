@@ -22,6 +22,7 @@
       $data['content'] .= "<table border='1'>";
      
     $data['content'] .="<tr>
+    <th>Student ID</th>
     <th>First Name</th>
     <th>Last Name</th>
     <th>Date of birth</th>
@@ -35,6 +36,7 @@
       // Display the student details within the html table
       while($row = mysqli_fetch_array($result)) {
         $data['content'] .="<tr>";
+        $data['content'] .= "<td> {$row["studentid"]} </td>";
          $data['content'] .= "<td> {$row["firstname"]} </td>";
          $data['content'] .= "<td> {$row["lastname"]} </td>";
          $data['content'] .= "<td> {$row["dob"]} </td>";
