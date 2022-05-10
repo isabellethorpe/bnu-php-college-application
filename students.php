@@ -16,6 +16,13 @@
 
       $result = mysqli_query($conn, $sql);
 
+      
+      $data['content'] .= <<<EOD
+      <h2>Students</h2>
+      <a href="addstudents.php" class="btn btn-primary mb-2">Add Student</a>
+EOD;
+
+
       // form will POST to deletestudents.php
         $data['content'] .="<form action='deletestudents.php'>";
 
