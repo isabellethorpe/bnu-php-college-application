@@ -13,13 +13,13 @@
 
       // Build SQL statment that selects all from STUDENT
       $sql = "SELECT * FROM student";
-      
-        //  $sql = "select * from studentmodules sm, module m where m.modulecode = sm.modulecode and sm.studentid = '" . $_SESSION['id'] ."';";
 
-      $result = mysqli_query($conn,$sql);
+      $result = mysqli_query($conn, $sql);
 
       // form will POST to deletestudents.php
-        $data['content'] .="<form action='deletestudents.php' method='POST'>";
+        $data['content'] .="<form action='deletestudents.php'>";
+
+
 
       // prepare page content
       $data['content'] .= "<table border='1'>";
@@ -51,13 +51,14 @@
          $data['content'] .= "<td> {$row["postcode"]} </td>";
          // add values to each checkbox
          $data['content'] .= "<td> <input type='checkbox' name='students[]'
-          value='[studentid]'</td>";
+          value='$row[studentid]'</td>";
       }
       $data['content'] .= "</table>";
 
         // delete button
-      $data['content'] .="<input type='submit' name='deletebtn' value='Delete' />";
-      
+
+      $data['content'] .="<input type='submit' name='deletebtn' value='Delete'/>";
+
       $data['content'] .="</form>";
 
       // render the template

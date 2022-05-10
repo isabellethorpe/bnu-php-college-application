@@ -17,11 +17,9 @@
     // Loop over students and SQL query to delete item
     foreach($_POST['students'] as $student) {
         $sql = "DELETE FROM student WHERE studentid = $student";
-        // run the query
         $result = mysqli_query($conn,$sql);
     }
     
-
     // redirect
     header("Location: students.php");
 
