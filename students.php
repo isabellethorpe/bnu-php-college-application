@@ -42,7 +42,7 @@ EOD;
     <th>County</th>
     <th>Country</th>
     <th>Postcode</th>
-    <th>Edit</th>
+    <th>Select</th>
     </tr>";
       
       // Display the student details within the html table
@@ -61,6 +61,8 @@ EOD;
          // add values to each checkbox
          $data['content'] .= "<td> <input type='checkbox' name='students[]'
           value='$row[studentid]'</td>";
+          $data['content'] .= "<td><a href='editstudent.php?id=".$row['studentid']."'>Edit</a>";
+
       }
       $data['content'] .= "</table>";
 
