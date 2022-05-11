@@ -41,7 +41,7 @@ if (isset($_SESSION['id'])) {
       $data['content'] = <<<EOD
 
    <h2>My Details</h2>
-   <form name="frmdetails" action="" method="post">
+   <form name="frmdetails" class="formdetails" action="" method="post">
    First Name :
    <input name="txtfirstname" type="text" value="{$row['firstname']}" /><br/>
    Surname :

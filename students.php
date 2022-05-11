@@ -25,17 +25,20 @@ EOD;
 
       // form will POST to deletestudents.php
         $data['content'] .="<form action='deletestudents.php'>";
+        $data['content'] .="<br>";
 
 
 
       // prepare page content
       $data['content'] .= "<table border='1'>";
+
+
      
     $data['content'] .="<tr>
     <th>Student ID</th>
     <th>First Name</th>
     <th>Last Name</th>
-    <th>Password</th>
+
     <th>Date of birth</th>
     <th>House</th>
     <th>Town</th>
@@ -52,7 +55,7 @@ EOD;
         $data['content'] .= "<td> {$row["studentid"]} </td>";
          $data['content'] .= "<td> {$row["firstname"]} </td>";
          $data['content'] .= "<td> {$row["lastname"]} </td>";
-         $data['content'] .= "<td> {$row["password"]} </td>";
+         //$data['content'] .= "<td> {$row["password"]} </td>";
          $data['content'] .= "<td> {$row["dob"]} </td>";
          $data['content'] .= "<td> {$row["house"]} </td>";
          $data['content'] .= "<td> {$row["town"]} </td>";
@@ -69,8 +72,9 @@ EOD;
       $data['content'] .= "</table>";
 
         // delete button
+      $data['content'] .="<br><br>";
 
-      $data['content'] .="<input type='submit' name='deletebtn' value='Delete'/>";
+      $data['content'] .="<input type='submit' class='deletebtn' name='deletebtn' value='Delete'/>";
 
       $data['content'] .="</form>";
 
