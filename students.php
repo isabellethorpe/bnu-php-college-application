@@ -35,6 +35,7 @@ EOD;
     <th>Student ID</th>
     <th>First Name</th>
     <th>Last Name</th>
+    <th>Password</th>
     <th>Date of birth</th>
     <th>House</th>
     <th>Town</th>
@@ -50,6 +51,7 @@ EOD;
         $data['content'] .= "<td> {$row["studentid"]} </td>";
          $data['content'] .= "<td> {$row["firstname"]} </td>";
          $data['content'] .= "<td> {$row["lastname"]} </td>";
+         $data['content'] .= "<td> {$row["password"]} </td>";
          $data['content'] .= "<td> {$row["dob"]} </td>";
          $data['content'] .= "<td> {$row["house"]} </td>";
          $data['content'] .= "<td> {$row["town"]} </td>";
