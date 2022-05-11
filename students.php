@@ -42,6 +42,7 @@ EOD;
     <th>County</th>
     <th>Country</th>
     <th>Postcode</th>
+    <th>Image</th>
     <th>Select</th>
     </tr>";
       
@@ -58,6 +59,7 @@ EOD;
          $data['content'] .= "<td> {$row["county"]} </td>";
          $data['content'] .= "<td> {$row["country"]} </td>";
          $data['content'] .= "<td> {$row["postcode"]} </td>";
+
          // add values to each checkbox
          $data['content'] .= "<td> <input type='checkbox' name='students[]'
           value='$row[studentid]'</td>";

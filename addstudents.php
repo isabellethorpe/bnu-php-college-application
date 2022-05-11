@@ -14,12 +14,9 @@ if (isset($_SESSION['id'])) {
    // if the form has been submitted
    if (isset($_POST['submit'])) {
 
+
       // build an sql statment to update the student details
-      // add meals sql
-
-    //   $_POST["weight"] = (int)$_POST["weight"];
-    //   $_POST["calories"] = (int)$_POST["calories"];
-
+      // add student sql
     
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
@@ -57,9 +54,18 @@ if (isset($_SESSION['id'])) {
    <input name="country" type="text" value="" /><br/>
    Postcode :
    <input name="postcode" type="text" value="" /><br/>
+   Image : 
+   <input name "image" type "file" value="" /><br/>
    <input type="submit" value="Save" name="submit"/>
    </form>
 EOD;
+
+
+// 5. Add a file upload field to the addstudent.php script and implement the PHP code to allow for an
+// image to be uploaded with each new student. If you decide to add a new database column as part
+// of this functionality, ensure you document this in your report. The uploaded image should be
+// displayed on the students.php page against the relevant student record. Higher marks will be
+// awarded for robust implementations will some level of file type validation. 
 
    // render the template
    echo template("templates/default.php", $data);
