@@ -20,7 +20,11 @@ if (isset($_SESSION['id'])) {
     //   $_POST["weight"] = (int)$_POST["weight"];
     //   $_POST["calories"] = (int)$_POST["calories"];
 
-      $sql = "INSERT into student (studentid, password, firstname, lastname, house, town, county, country, postcode) values ('$_POST[studentid]', '$_POST[password]', '$_POST[firstname]', '$_POST[lastname]', '$_POST[house]', '$_POST[town]', '$_POST[county]', '$_POST[country]', '$_POST[postcode]');";
+    
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
+
+      $sql = "INSERT into student (studentid, password, firstname, lastname, dob, house, town, county, country, postcode) values ('$_POST[studentid]', '$password',
+      '$_POST[firstname]', '$_POST[lastname]', '$_POST[dob]', '$_POST[house]', '$_POST[town]', '$_POST[county]', '$_POST[country]', '$_POST[postcode]');";
 
       $result = mysqli_query($conn,$sql);
 
@@ -41,6 +45,8 @@ if (isset($_SESSION['id'])) {
    <input name="firstname" type="text" value="" /><br/>
    Last Name :
    <input name="lastname" type="text" value="" /><br/>
+   Date of birth :
+   <input name="dob" type="text" value="" /><br/>
    House :
    <input name="house" type="text" value="" /><br/>
    Town :
