@@ -30,34 +30,59 @@ if (isset($_SESSION['id'])) {
 
    }
 
+
    $data['content'] .= <<<EOD
 
    <h2>Add Student</h2>
    <form name="formaddstudent" action="" method="post">
+   <div class="form-group">
    Student ID :
-   <input name="studentid" type="text" value="" /><br/>
+   <input name="studentid" type="text" value="" class="form-control"/><br/>
+   </div>
+   <div class="form-group">
    Password :
-   <input name="password" type="text" value="" /><br/>
+   <input name="password" type="text" value="" class="form-control"/><br/>
+   </div>
+   <div class="form-group">
    First Name :
-   <input name="firstname" type="text" value="" /><br/>
+   <input name="firstname" type="text" value="" class="form-control"/><br/>
+   </div>
+   <div class="form-group">
    Last Name :
-   <input name="lastname" type="text" value="" /><br/>
+   <input name="lastname" type="text" value="" class="form-control"/><br/>
+   </div>
+   <div class="form-group">
    Date of birth :
-   <input name="dob" type="text" value="" /><br/>
+   <input name="dob" type="text" value="" class="form-control"/><br/>
+   </div>
+   <div class="form-group">
    House :
-   <input name="house" type="text" value="" /><br/>
+   <input name="house" type="text" value="" class="form-control"/><br/>
+   </div>
+   <div class="form-group">
    Town :
-   <input name="town" type="text" value="" /><br/>
+   <input name="town" type="text" value="" class="form-control"/><br/>
+   </div>
+   <div class="form-group">
    County :
-   <input name="county" type="text" value="" /><br/>
+   <input name="county" type="text" value="" class="form-control"/><br/>
+   </div>
+   <div class="form-group">
    Country :
-   <input name="country" type="text" value="" /><br/>
+   <input name="country" type="text" value="" class="form-control"/><br/>
+   </div>
+   <div class="form-group">
    Postcode :
-   <input name="postcode" type="text" value="" /><br/>
+   <input name="postcode" type="text" value="" class="form-control"/><br/>
+   </div>
+   <div class="form-group">
    Image : 
-   <input name "image" type "file" value="" /><br/>
+   <input name "image" type "file" value="" class="form-control"/><br/>
+   </div>
+   <br>
    <input type="submit" value="Save" name="submit"/>
    </form>
+
 EOD;
 
 
