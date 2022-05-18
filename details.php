@@ -31,7 +31,7 @@ if (isset($_SESSION['id'])) {
    else {
       // Build a SQL statment to return the student record with the id that
       // matches that of the session variable.
-      $sql = "select * from student where studentid='". $_SESSION['studentid'] . "';";
+      $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result);
 
