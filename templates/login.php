@@ -5,12 +5,12 @@
 <form name="frmLogin" action="authenticate.php" method="post">
 <div class="form-group">
    Student ID:
-   <input name="txtid" type="text" />
+   <input name="txtid" type="text" class="form-control" />
    </div>
    <br/>
    <div class="form-group">
    Password:
-   <input name="txtpwd" type="password" />
+   <input name="txtpwd" type="password" class="form-control" />
    </div>
    <br/>
 
