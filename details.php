@@ -31,7 +31,7 @@ if (isset($_SESSION['id'])) {
    else {
       // Build a SQL statment to return the student record with the id that
       // matches that of the session variable.
-      $sql = "select * from student where studentid='". $_SESSION['id'] . "';";
+      $sql = "select * from student where studentid='". $_SESSION['studentid'] . "';";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result);
 
@@ -41,6 +41,7 @@ if (isset($_SESSION['id'])) {
       $data['content'] = <<<EOD
 
    <h2>My Details</h2>
+
    <form name="frmdetails" class="formdetails" action="" method="post">
    First Name :
    <input name="txtfirstname" type="text" value="{$row['firstname']}" /><br/>
