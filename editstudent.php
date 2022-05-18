@@ -28,7 +28,15 @@ if (isset($_SESSION['id'])) {
 
     // studentid = studentid?
 
-      $sql = "SELECT * from student where id='". $_GET['studentid'] . "';";
+
+
+   //  $sql = "SELECT image FROM student WHERE studentid='" . $_GET["studentid"] ."';";
+	
+   //  $result = mysqli_query($conn, $sql);
+   //  $row = mysqli_fetch_array($result);
+
+
+      $sql = "SELECT * from student where studentid='". $_GET["studentid"] . "';";
       $result = mysqli_query($conn,$sql);
       $row = mysqli_fetch_array($result);
 
